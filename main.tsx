@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { Hono } from "$hono/mod.ts";
 import { jsx } from "$hono/jsx/index.ts";
 import { serveStatic } from "$hono/middleware.ts";
+import { Hono } from "$hono/mod.ts";
 import App from "./App.tsx";
 import Client from "./subhosting.ts";
 
@@ -31,9 +31,9 @@ app.post("/deployment", async (c) => {
     entryPointUrl: "main.ts",
     assets: {
       "main.ts": {
-        "kind": "file",
-        "content": body.code,
-        "encoding": "utf-8",
+        kind: "file",
+        content: body.code,
+        encoding: "utf-8",
       },
     },
     envVars: {},
